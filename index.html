@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Oleh Blokitin – Java Developer</title>
+  <!-- Шрифт Rubik для современного стиля -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0; 
+      padding: 0;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #f9f9f9; /* Светлый фон */
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 500px;
+      width: 100%;
+      padding: 30px;
+      margin: 40px auto; /* центрирование по горизонтали и отступ сверху */
+      text-align: left;
+    }
+    .position {
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #333;
+      font-size: 1rem;
+    }
+    .sub-info {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 12px;
+    }
+    .email-line {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .email-line:hover {
+      color: #222;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: flex-end; /* кнопки справа */
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    a.btn {
+      background-color: #0a66c2; /* LinkedIn blue */
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 24px; /* более скруглённая форма */
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.2s;
+      cursor: pointer;
+    }
+    a.btn:hover {
+      background-color: #084d90; /* hover */
+    }
+    /* Небольшие улучшения на очень узких экранах */
+    @media (max-width: 400px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="position">Oleh Blokitin – Java Developer</div>
+    <div class="sub-info">Previously at a Manufacturing Plant</div>
+    
+    <div class="email-line" onclick="copyEmail()" id="emailText">
+      📧 oleh.blokitin@gmail.com
+    </div>
+
+    <h1>Hi there 👋🏼</h1>
+
+    <p>
+      I help businesses see code not as complexity and cost,
+      but as a tool for earning more.
+    </p>
+
+    <div class="buttons">
+      <a class="btn" href="mailto:oleh.blokitin@gmail.com">Email me</a>
+      <a class="btn" href="CV_OLEH_BLOKITIN.pdf" download>View Resume</a>
+    </div>
+  </div>
+
+  <script>
+    function copyEmail() {
+      const email = document.getElementById('emailText').textContent.replace('📧','').trim();
+      navigator.clipboard.writeText(email).then(() => {
+        alert('Email copied to clipboard!');
+      });
+    }
+  </script>
+</body>
+</html>
