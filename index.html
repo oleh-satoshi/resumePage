@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Oleh Blokitin – Java Developer</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" />
+  
+  <!-- Улучшенная загрузка шрифта -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet">
+  
   <style>
     * {
       box-sizing: border-box;
@@ -61,17 +65,24 @@
       width: 14px;
       height: 14px;
     }
+    
+    /* Фикс для заголовка */
     h1 {
       font-size: 1.8rem;
       margin-bottom: 8px;
       color: #333333;
+      font-family: 'Rubik', sans-serif !important;
     }
+    
+    /* Фикс для параграфов */
     p {
       font-size: 1.05rem;
       line-height: 1.5;
       color: #666666;
       margin-bottom: 20px;
+      font-family: 'Rubik', sans-serif !important;
     }
+    
     .buttons {
       display: flex;
       justify-content: flex-end;
@@ -93,6 +104,7 @@
     a.btn:hover {
       background-color: #084d90;
     }
+    
     @media (max-width: 400px) {
       .container {
         padding: 20px;
@@ -123,7 +135,7 @@
     <h1>Hi there 👋🏼</h1>
 
     <p>
-      <span style="color:#004992; font-weight:1000;">My mission is</span> to develop and implement highly efficient backend solutions that ensure instant processing of transactions, reports, and calculations, contributing to increased business efficiency and competitiveness.
+      <span style="color:#004992; font-weight:700;">My mission is</span> to develop and implement highly efficient backend solutions that ensure instant processing of transactions, reports, and calculations, contributing to increased business efficiency and competitiveness.
     </p>
     
     <p>
