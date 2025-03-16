@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Oleh Blokitin – Java Developer</title>
-  <!-- Шрифт Rubik для современного стиля -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" />
   <style>
@@ -15,7 +14,7 @@
     }
     body {
       font-family: 'Rubik', sans-serif;
-      background-color: #f9f9f9; /* Светлый фон */
+      background-color: #f9f9f9;
       margin: 0;
       padding: 20px;
     }
@@ -26,50 +25,64 @@
       max-width: 500px;
       width: 100%;
       padding: 30px;
-      margin: 40px auto; /* центрирование по горизонтали и отступ сверху */
+      margin: 40px auto;
       text-align: left;
     }
     .position {
       font-weight: 500;
       margin-bottom: 6px;
-      color: #333;
+      color: #333333;
       font-size: 1rem;
     }
     .sub-info {
       font-size: 0.9rem;
-      color: #777;
+      color: #666666;
       margin-bottom: 12px;
     }
-    .email-line {
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       font-size: 1rem;
-      color: #555;
       margin-bottom: 20px;
-      cursor: pointer;
     }
-    .email-line:hover {
-      color: #222;
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #666666;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .contact-item:hover {
+      color: #444444;
+    }
+    .contact-item img {
+      width: 14px;
+      height: 14px;
     }
     h1 {
       font-size: 1.8rem;
       margin-bottom: 8px;
+      color: #333333;
     }
     p {
       font-size: 1.05rem;
       line-height: 1.5;
-      color: #333;
+      color: #666666;
       margin-bottom: 20px;
     }
     .buttons {
       display: flex;
-      justify-content: flex-end; /* кнопки справа */
+      justify-content: flex-end;
       gap: 10px;
       flex-wrap: wrap;
     }
     a.btn {
-      background-color: #0a66c2; /* LinkedIn blue */
+      background-color: #0a66c2;
       color: #fff;
       padding: 12px 20px;
-      border-radius: 24px; /* более скруглённая форма */
+      border-radius: 24px;
       font-weight: 500;
       font-size: 0.9rem;
       text-decoration: none;
@@ -78,9 +91,8 @@
       cursor: pointer;
     }
     a.btn:hover {
-      background-color: #084d90; /* hover */
+      background-color: #084d90;
     }
-    /* Небольшие улучшения на очень узких экранах */
     @media (max-width: 400px) {
       .container {
         padding: 20px;
@@ -97,18 +109,25 @@
     <div class="position">Oleh Blokitin – Java Developer</div>
     <div class="sub-info">Currently at DigitalVertex Enterprises</div>
     
-    <div class="email-line" onclick="copyEmail()" id="emailText">
-      📧 oleh.blokitin@gmail.com
+    <div class="contacts">
+      <a class="contact-item" href="https://www.linkedin.com/in/oleh-blokitin/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Linkedin.svg" alt="LinkedIn" />
+        My LinkedIn
+      </a>
+      <a class="contact-item" href="mailto:oleh.blokitin@gmail.com">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" />
+        oleh.blokitin@gmail.com
+      </a>
     </div>
 
     <h1>Hi there 👋🏼</h1>
 
     <p>
-        My mission is to develop Java applications that clearly show businesses the real value of technology — reducing costs and increasing profits.
+      <span style="color:#004992; font-weight:1000;">My mission is</span> to develop and implement highly efficient backend solutions that ensure instant processing of transactions, reports, and calculations, contributing to increased business efficiency and competitiveness.
     </p>
     
     <p>
-        If you’d like to connect, I’d be happy to! I’m open to new opportunities and networking. Let’s connect!
+      If you’d like to connect, I’d be happy to! I’m open to new opportunities and networking. Let’s connect!
     </p>
 
     <div class="buttons">
@@ -117,13 +136,5 @@
     </div>
   </div>
 
-  <script>
-    function copyEmail() {
-      const email = document.getElementById('emailText').textContent.replace('📧','').trim();
-      navigator.clipboard.writeText(email).then(() => {
-        alert('Email copied to clipboard!');
-      });
-    }
-  </script>
 </body>
 </html>
